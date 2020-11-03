@@ -18,7 +18,7 @@ public class Work2 {
         double java_avg, front_avg, back_avg;
         double all_avg;
 
-        for (int i=0; i<nums.length; i++)
+        for (int i=0; i<4; i++)
         {
 //            java基础总成绩
             java_sum = java_sum + nums[0][i];
@@ -35,7 +35,7 @@ public class Work2 {
         front_avg = (double) front_sum/4;
         back_avg = (double) back_sum/4;
 
-        all_avg = java_avg + front_avg + back_avg;
+        all_avg = (java_avg + front_avg + back_avg)/3;
 
         System.out.print("Java基础的平均成绩：" + java_avg + "\n");
         System.out.print("前端技术的平均成绩：" + front_avg + "\n");

@@ -14,8 +14,7 @@ public class Work3 {
         */
 
 //        定义杨辉三角的行数
-        int rows = 9;
-
+        int rows = 10;
         int [][] nums = new int [rows][rows];
 
         for (int i=0; i<nums.length; i++)
@@ -28,7 +27,7 @@ public class Work3 {
                 }
                 else
                 {
-                    nums[i][j] = nums[i][j-1] + nums[i-1][j];
+                    nums[i][j] = nums[i-1][j-1] + nums[i-1][j];
                 }
             }
         }
@@ -40,11 +39,28 @@ public class Work3 {
         1  2  1
         1 3  3  1
         */
+        System.out.println("直角输出杨辉三角：");
         for(int i=0; i<nums.length; i++)
         {
             for (int j=0; j<=i; j++)
             {
                 System.out.print(nums[i][j] + " ");
+            }
+            System.out.println("");
+        }
+
+//       等腰输出杨辉三角
+        System.out.println("等腰输出杨辉三角：");
+        for(int i=0; i<nums.length; i++)
+        {
+//            输出空格
+            for (int k=0;k<(rows-i-1);k++)
+            {
+                System.out.print("   ");
+            }
+            for (int j=0; j<=i; j++)
+            {
+                System.out.print(nums[i][j] + "     ");
             }
             System.out.println("");
         }
